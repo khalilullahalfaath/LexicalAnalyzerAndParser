@@ -66,4 +66,16 @@ transitionTable[["q52","т"]] = "q17"
 //verb учить
 transitionTable[["q12","у"]] = "q19"
 transitionTable[["q19","ч"]] = "q20"
+transitionTable[["q20","и"]] = "q21"
+transitionTable[["q21","т"]] = "q22"
+transitionTable[["q22","ь"]] = "q17"
 
+//verb тянуть
+transitionTable[["q12","т"]] = "q23"
+transitionTable[["q23","я"]] = "q24"
+transitionTable[["q24","н"]] = "q25"
+transitionTable[["q25","у"]] = "q21"
+transitionTable[["q21","т"]] = "q22"
+transitionTable[["q22","ь"]] = "q17"
+
+//verb рисовать

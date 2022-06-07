@@ -147,6 +147,51 @@ transitionTable[["q40","н"]] = "q41"
 transitionTable[["q41","и"]] = "q42"
 transitionTable[["q42","к"]] = "q4"
 
+const lexicalAnalysis = (words) => {
+    let lexicalAnalysisResult = document.getElementById(' lexicalAnalysisResult')
+    let lexicalAnalysisTitle = document.getElementById('lexicalAnalysisTitle')
 
+    lexicalAnalysisResult.innerText = ''
 
+    let stringInput = words + "#"
+    let indexChar = 0
+    let state = 'q0'
+    let currentToken = ''
+    let currentChar = ''
 
+    while (state != "ACCEPT"){
+        currentChar = stringInput[indexChar]
+
+        if (currentChar != '#' && currentChar != " " && !alfabet.includes(currentChar)){
+            console.log("Inputan tidak diterima. Masukkan dalam bentuk aksara Rusia!")
+            lexicalAnalysisResult.innerText = "Inputan tidak diterima. Masukkan dalam bentuk aksara Rusia!"
+            break
+        }
+
+        currentToken += currentChar
+        state = transitionTable[[state, currentChar]]
+
+        if (state == "q4c"){
+            lexicalAnalysisResult.innerText = lexicalAnalysisResult.innerText + 'Current Token : ' + currentToken + ', valid'
+            resultLa.innerText += '\n'
+            currentToken = ''
+        }
+        if (state == "ERROR"){
+            resultLa.innerText += 'ERROR'
+            resultLa.style.color = 'red'
+            break
+        }
+        indexChar++
+    }
+
+}
+
+let form = document.getElementById('form')
+
+const handleSubmit = (e) => {
+    let words = document.getElementById('words').value
+    lexicalAnalysis(words)
+    e.preventDefault()
+}
+
+form.addEventListener('submit', (e) => handleSubmit(e))

@@ -3,7 +3,18 @@
     alfabet, daftar state
 */
 
-const alfabet = [...'abcdefghijklmnopqrstuvwxyz'];
+// http://jrgraphix.net/r/Unicode/0400-04FF
+
+const alfabet = [];
+for (let i = 1024; i <= 1279; i++){
+    let text = String.fromCharCode(i);
+    alfabet.push(text);
+}
+
+// const alfabet = /^[\u0400-\u04FF]+$/;
+// console.log('Привіт:', alfabet.test('Привіт'));
+// console.log('Hello:', alfabet.test('Hello'));
+
 const stateList = [];
 
 let N = 42;
@@ -13,6 +24,8 @@ for (let i = 0; i <= N; i++){
     var namaState = str.concat(strAngka);
     stateList.push(namaState)
 }
+
+let transitionTable = {}
 
 stateList.forEach(state => {
     alfabet.forEach(alfabet => {
@@ -134,31 +147,6 @@ transitionTable[["q40","н"]] = "q41"
 transitionTable[["q41","и"]] = "q42"
 transitionTable[["q42","к"]] = "q4"
 
-var input_string = input_string;
-var idx = 0;
-var state = "q0";
-var token = "";
 
-while (state != "ACCEPT") {
-    char = input_string[idx];
-    token += char;
-
-    console.log(state, char);
-    state = transitionTable[(state, char)]
-
-    if (state == "q4") {
-        console.log("current token : {} is valid")
-        token = ""
-    }
-    if (state == "ERROR") {
-        console.log("Error")
-        break
-    }
-    idx += 1;
-}
-
-if (state == "ACCEPT") {
-    console.log("Semua token yang di input :", input_string, "valid")
-}
 
 

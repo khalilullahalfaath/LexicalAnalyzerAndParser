@@ -134,5 +134,31 @@ transitionTable[["q40","н"]] = "q41"
 transitionTable[["q41","и"]] = "q42"
 transitionTable[["q42","к"]] = "q4"
 
+var input_string = input_string;
+var idx = 0;
+var state = "q0";
+var token = "";
+
+while (state != "ACCEPT") {
+    char = input_string[idx];
+    token += char;
+
+    console.log(state, char);
+    state = transitionTable[(state, char)]
+
+    if (state == "q4") {
+        console.log("current token : {} is valid")
+        token = ""
+    }
+    if (state == "ERROR") {
+        console.log("Error")
+        break
+    }
+    idx += 1;
+}
+
+if (state == "ACCEPT") {
+    console.log("Semua token yang di input :", input_string, "valid")
+}
 
 

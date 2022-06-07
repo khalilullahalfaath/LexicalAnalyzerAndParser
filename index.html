@@ -1,64 +1,57 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>TBA</title>
-        <meta name="viewport" content="width=device-width, initial-scale =1.0">
-        <link rel="stylesheet" href="style.css">
-        
-         <!--Bootstarap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Lexical Analyzer</title>
+</head>
+<header>
+  <div class="Jumbotron">
+    <h1>Kelompok Russia</h1>
+</div>
+</header>
+<marquee style="width: 100%;" scrolldelay="-20">
+  Kata-Kata inputan Subjek yang dapat diterima : "мать (ibu)" ,"отец (ayah)", "им (mereka)" , "ты(kamu)", "вы(kalian)" Kata-Kata inputan Verb yang dapat diterima : "готовит (Memasak)", "уяить (menmusnahkan)", "тянуть (menarik)","рисовать (menggambar)", "читать ( membaca)" Kata-Kata inputan objek yang dapat diterima : "книга (buku)", "комар (nyamuk)", "pом (rum)", "ученик (murid)"
+</marquee>
+<body class="container mt-5">
 
-         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    </head>
-    <body>
-        <header>
-            <div class="Jumbotron">
-                <h1>Kelompok Russia</h1>
-                <py-script>print("Test")</py-script>
-            </div>
-        </header>
-        <main>
-            <form>
-                <div class="mb-3">
-                  <p>Lexical Analyzer</p>
-                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <div class="card">
-                    <div class="card-header">
-                      Hasil
-                    </div>
-                    <div class="card-body">
-                      <blockquote class="blockquote mb-0">
-                        <p>A well-known quote, contained in a blockquote element.</p>
-                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                      </blockquote>
-                    </div>
-                </div>
+    <div class="card">
+        <div class="card-body">
+            <form id="form">
+                <h5 class="card-title" style="text-align: center;">Lexical Analyzer</h5>
+                <h6 class="card-subtitle text-muted" style="text-align: center;" >русский язык</h6>
+                <p style="text-align: center;">Bahasa Rusia</p>
                 <br>
-                <br>
+                <p class="card-text">Input kata atau kalimat dalam aksara russia</p>
                 <div class="mb-3">
-                  <<p>Parser Analyzer</p>
-                  <input type="text" class="form-control" id="exampleInputPassword1">
+                    <label for="input_kalimat" class="form-label">Input kalimat</label>
+                    <input type="text" class="form-control" id="input_kalimat" required placeholder="ex: ученик">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" id="btn-analyze" class="btn btn-primary">
+                    Analyze
+                    <div class="spinner-border text-light spinner-border-sm ms-2" id="loading" style="display: none" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </button>
+                <div class="mb-3 mt-3">
+                    <label for="result" class="form-label">Hasil</label>
+                    <input type="text" class="form-control" disabled id="result">
+                </div>
+                <button type="button" id="btn-clear" class="btn btn-danger">
+                    Clear
+                </button>
             </form>
-            <div class="card">
-                <div class="card-header">
-                  Hasil
-                </div>
-                <div class="card-body">
-                  <blockquote class="blockquote mb-0">
-                    <p>A well-known quote, contained in a blockquote element.</p>
-                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                  </blockquote>
-                </div>
-            </div>
-        </main>
-        <script src="index.js">
-        </script>
-    </body>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
 </html>

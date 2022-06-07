@@ -1,10 +1,6 @@
-header {
-    overflow: hidden;
-}
-
-body {
-    overflow-x:hidden;
-    background: aliceblue;
+.container mt-5 {
+    overflow-x: hidden;
+    background: burlywood;  
 }
 
 .Jumbotron h1 {
@@ -14,35 +10,14 @@ body {
     background-color:darksalmon;
     font-family: 'Assistant';
     font-weight: bold;
+    border: 2px solid black;
 }
 
-.mb-3 input[type=text] {
-    width: 50%;
-    height: 90px;
-    justify-content: center;
-    margin-left: 350px;
-    text-align: center;
-
-}
-
-button[type=submit] {
-    margin-left: 350px;
-
-}
-
-.mb-3 p {
-    text-align: center;
+marquee {
     font-weight: bold;
+    border: 2px solid black;
 }
 
-.card {
-    margin: auto;
-    margin-top: 50px;
-    text-align: center;
-    width: 52%;
-    
-}
-
-audio {
-    text-align: center;
+.card-body {
+    border: 2px solid black;
 }

@@ -16,6 +16,9 @@ for (let i = 1024; i <= 1279; i++){
     let text = String.fromCharCode(i);
     alfabet.push(text);
 }
+alfabet.push('y');
+alfabet.push('p');
+alfabet.push('a');
 
 // const alfabet = /^[\u0400-\u04FF]+$/;
 // console.log('Привіт:', alfabet.test('Привіт'));
@@ -61,23 +64,22 @@ transitionTable[["q5","м"]] = "q1"
 //subject отец
 transitionTable[["q0","о"]] = "q6"
 transitionTable[["q6","т"]] = "q7"
-transitionTable[["q7","e"]] = "q8"
+transitionTable[["q7","е"]] = "q8"
 transitionTable[["q8","ц"]] = "q4"
 
-transitionTable[["q5","о"]] = "q6"
+transitionTable[["q5","ц"]] = "q6"
 
-//subject я
-transitionTable[["q0","я"]] = "q9"
-transitionTable[["q9"," "]] = "q5"
-transitionTable[["q9","#"]] = "ACCEPT"
+//subject им
+transitionTable[["q0","и"]] = "q9"
+transitionTable[["q9","м"]] = "q4"
 
-transitionTable[["q5","я"]] = "q9"
+transitionTable[["q5","и"]] = "q10"
 
 //subject ты
 transitionTable[["q0","т"]] = "q10"
 transitionTable[["q10","ы"]] = "q4"
 
-transitionTable[["q5","т"]] = "q10"
+transitionTable[["q5","т"]] = "q9"
 
 //subject вы
 transitionTable[["q0","в"]] = "q11"
@@ -96,10 +98,10 @@ transitionTable[["q17","т"]] = "q4"
 
 transitionTable[["q5","г"]] = "q12"
 
-//verb учить
+//verb уяить
 transitionTable[["q0","у"]] = "q18"
-transitionTable[["q18","ч"]] = "q19"
-transitionTable[["q29","и"]] = "q20"
+transitionTable[["q18","я"]] = "q19"
+transitionTable[["q19","и"]] = "q20"
 transitionTable[["q20","т"]] = "q21"
 transitionTable[["q21","ь"]] = "q4"
 
@@ -142,9 +144,9 @@ transitionTable[["q35","м"]] = "q36"
 transitionTable[["q36","а"]] = "q37"
 transitionTable[["q37","р"]] = "q4"
 
-//object рис
-transitionTable[["q24","и"]] = "q38"
-transitionTable[["q38","с"]] = "q4"
+//object ром
+transitionTable[["q24","о"]] = "q38"
+transitionTable[["q38","м"]] = "q4"
 
 //object ученик
 transitionTable[["q18","ч"]] = "q39"
@@ -193,5 +195,3 @@ clear.onclick = (event) => {
     inputKalimat.value = "";
     hasil.value = "";
 }
-
-

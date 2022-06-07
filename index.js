@@ -152,6 +152,7 @@ const lexicalAnalysis = (words) => {
     let lexicalAnalysisTitle = document.getElementById('lexicalAnalysisTitle')
 
     lexicalAnalysisResult.innerText = ''
+    lexicalAnalysisTitle.className = 'block font-medium text-lg'
 
     let stringInput = words + "#"
     let indexChar = 0
@@ -173,12 +174,12 @@ const lexicalAnalysis = (words) => {
 
         if (state == "q4c"){
             lexicalAnalysisResult.innerText = lexicalAnalysisResult.innerText + 'Current Token : ' + currentToken + ', valid'
-            resultLa.innerText += '\n'
+            lexicalAnalysisResult.innerText += '\n'
             currentToken = ''
         }
         if (state == "ERROR"){
-            resultLa.innerText += 'ERROR'
-            resultLa.style.color = 'red'
+            lexicalAnalysisResult.innerText += 'ERROR'
+            lexicalAnalysisResult.style.color = 'red'
             break
         }
         indexChar++

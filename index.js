@@ -79,3 +79,21 @@ transitionTable[["q21","т"]] = "q22"
 transitionTable[["q22","ь"]] = "q17"
 
 //verb рисовать
+transitionTable[["q12","р"]] = "q26"
+transitionTable[["q26","и"]] = "q27"
+transitionTable[["q27","с"]] = "q28"
+transitionTable[["q28","о"]] = "q29"
+transitionTable[["q29","в"]] = "q30"
+transitionTable[["q30","а"]] = "q21"
+transitionTable[["q21","т"]] = "q22"
+transitionTable[["q22","ь"]] = "q17"
+
+//verb читать
+transitionTable[["q12","ч"]] = "q31"
+transitionTable[["q31","и"]] = "q32"
+transitionTable[["q32","т"]] = "q30"
+transitionTable[["q30","а"]] = "q21"
+transitionTable[["q21","т"]] = "q22"
+transitionTable[["q22","ь"]] = "q17"
+
+

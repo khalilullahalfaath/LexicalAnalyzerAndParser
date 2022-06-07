@@ -96,4 +96,29 @@ transitionTable[["q30","а"]] = "q21"
 transitionTable[["q21","т"]] = "q22"
 transitionTable[["q22","ь"]] = "q17"
 
+//object книга
+transitionTable[["q33","к"]] = "q34"
+transitionTable[["q34","н"]] = "q35"
+transitionTable[["q35","и"]] = "q36"
+transitionTable[["q36","г"]] = "q37"
+transitionTable[["q37","а"]] = "q38"
 
+//object комар
+transitionTable[["q33","к"]] = "q34"
+transitionTable[["q34","о"]] = "q40"
+transitionTable[["q40","м"]] = "q41"
+transitionTable[["q41","а"]] = "q42"
+transitionTable[["q42","р"]] = "q38"
+
+//object рис
+transitionTable[["q33","р"]] = "q43"
+transitionTable[["q43","и"]] = "q44"
+transitionTable[["q44","с"]] = "q38"
+
+//object ученик
+transitionTable[["q33","у"]] = "q45"
+transitionTable[["q45","ч"]] = "q46"
+transitionTable[["q46","е"]] = "q47"
+transitionTable[["q47","н"]] = "q48"
+transitionTable[["q48","и"]] = "q49"
+transitionTable[["q49","к"]] = "q38"

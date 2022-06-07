@@ -1,3 +1,9 @@
+var inputKalimat = document.getElementById('input_kalimat');
+var hasil = document.getElementById('result');
+var clear = document.getElementById('btn-clear');
+var loading = document.getElementById('loading');
+var form = document.getElementById('form')
+
 /*
     Inisialisasi:
     alfabet, daftar state
@@ -5,7 +11,7 @@
 
 // http://jrgraphix.net/r/Unicode/0400-04FF
 
-const alfabet = [];
+var alfabet = [];
 for (let i = 1024; i <= 1279; i++){
     let text = String.fromCharCode(i);
     alfabet.push(text);
@@ -15,7 +21,7 @@ for (let i = 1024; i <= 1279; i++){
 // console.log('Привіт:', alfabet.test('Привіт'));
 // console.log('Hello:', alfabet.test('Hello'));
 
-const stateList = [];
+var stateList = [];
 
 let N = 42;
 for (let i = 0; i <= N; i++){
@@ -25,15 +31,15 @@ for (let i = 0; i <= N; i++){
     stateList.push(namaState)
 }
 
-let transitionTable = {}
+var transitionTable = {}
 
-stateList.forEach(state => {
-    alfabet.forEach(alfabet => {
-        transitionTable[[state, alfabet]] = 'ERROR'
-    });
-    transitionTable[[state, '#']] = 'ERROR'
-    transitionTable[[state, ' ']] = 'ERROR'
-});
+for(var state in stateList) {
+    for(daftarAlfabet in alfabet) {
+        transitionTable[[stateList[state], alfabet[daftarAlfabet]]] = 'ERROR'
+    }
+    transitionTable[[stateList[state], '#']] = 'ERROR'
+    transitionTable[[stateList[state], ' ']] = 'ERROR'
+}
 
 // initial state
 transitionTable[["q0"," "]] = "q0";
@@ -147,52 +153,45 @@ transitionTable[["q40","н"]] = "q41"
 transitionTable[["q41","и"]] = "q42"
 transitionTable[["q42","к"]] = "q4"
 
-const lexicalAnalysis = (words) => {
-    let lexicalAnalysisResult = document.getElementById(' lexicalAnalysisResult')
-    let lexicalAnalysisTitle = document.getElementById('lexicalAnalysisTitle')
+form.onsubmit = (event) => {
 
-    lexicalAnalysisResult.innerText = ''
-    lexicalAnalysisTitle.className = 'block font-medium text-lg'
+    event.preventDefault()
 
-    let stringInput = words + "#"
-    let indexChar = 0
-    let state = 'q0'
-    let currentToken = ''
-    let currentChar = ''
+    loading.style = 'display: inline-block'
 
-    while (state != "ACCEPT"){
-        currentChar = stringInput[indexChar]
-
-        if (currentChar != '#' && currentChar != " " && !alfabet.includes(currentChar)){
-            console.log("Inputan tidak diterima. Masukkan dalam bentuk aksara Rusia!")
-            lexicalAnalysisResult.innerText = "Inputan tidak diterima. Masukkan dalam bentuk aksara Rusia!"
-            break
-        }
-
+    // lexical analysis
+    var indexChar = 0;
+    var state = 'q0';
+    var currentToken = '';
+    var validation = '';
+    var inputChar = inputKalimat.value + '#';
+    console.log(inputChar);
+    while (state != 'ACCEPT') {
+        var currentChar = inputChar.charAt(indexChar)
         currentToken += currentChar
         state = transitionTable[[state, currentChar]]
-
-        if (state == "q4c"){
-            lexicalAnalysisResult.innerText = lexicalAnalysisResult.innerText + 'Current Token : ' + currentToken + ', valid'
-            lexicalAnalysisResult.innerText += '\n'
+        if(state == 'q4') {
+            console.log("valid gais")
+            validation += "valid "
             currentToken = ''
         }
-        if (state == "ERROR"){
-            lexicalAnalysisResult.innerText += 'ERROR'
-            lexicalAnalysisResult.style.color = 'red'
-            break
+        if(state == 'ERROR') {
+            console.log("ERROR")
+            validation += "ERROR "
+            break;
         }
-        indexChar++
+        indexChar += 1
     }
 
+    console.log(validation);
+    hasil.value = validation.trim();
+
+    loading.style = 'display: none'
 }
 
-let form = document.getElementById('form')
-
-const handleSubmit = (e) => {
-    let words = document.getElementById('words').value
-    lexicalAnalysis(words)
-    e.preventDefault()
+clear.onclick = (event) => {
+    inputKalimat.value = "";
+    hasil.value = "";
 }
 
-form.addEventListener('submit', (e) => handleSubmit(e))
+

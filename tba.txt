@@ -1,0 +1,4 @@
+S ::= <subject> <verb> <object>
+subject ::= ibu (мать) | ayah (отец) | saya (я) | kamu (ты)| kalian (вы)
+verb ::= memasak (готовит) mengajar (учить)| menarik (тянуть)| menggambar (рисовать)| membaca (читать)
+object ::= buku (книга)| nyamuk (комар)| nasi (рис)| murid (ученик)

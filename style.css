@@ -1,0 +1,48 @@
+header {
+    overflow: hidden;
+}
+
+body {
+    overflow-x:hidden;
+    background: aliceblue;
+}
+
+.Jumbotron h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    background-color:darksalmon;
+    font-family: 'Assistant';
+    font-weight: bold;
+}
+
+.mb-3 input[type=text] {
+    width: 50%;
+    height: 90px;
+    justify-content: center;
+    margin-left: 350px;
+    text-align: center;
+
+}
+
+button[type=submit] {
+    margin-left: 350px;
+
+}
+
+.mb-3 p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.card {
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    width: 52%;
+    
+}
+
+audio {
+    text-align: center;
+}

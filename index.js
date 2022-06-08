@@ -16,9 +16,11 @@ for (let i = 1024; i <= 1279; i++){
     let text = String.fromCharCode(i);
     alfabet.push(text);
 }
-alfabet.push('y');
-alfabet.push('p');
-alfabet.push('a');
+
+for (let i = 65; i <= 122; i++){
+    let text = String.fromCharCode(i);
+    alfabet.push(text);
+}
 
 // const alfabet = /^[\u0400-\u04FF]+$/;
 // console.log('Привіт:', alfabet.test('Привіт'));

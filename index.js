@@ -167,6 +167,7 @@ transitionTable[["q42","к"]] = "q4"
 
 //Parse table
 
+print("kontol")
 
 form.onsubmit = (event) => {
 

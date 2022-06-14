@@ -72,10 +72,6 @@ parse_table[["OB",'книга']] = ['книга']
 parse_table[["OB",'комар']] = ['комар']
 parse_table[["OB",'pом']] = ['pом']
 parse_table[["OB",'ученик']] = ['ученик']
-parse_table[["OB",'EOS']] = ['EOS']
-
-
-
 parse_table[["OB",'EOS']] = ['error']
 
 formParser.onsubmit = (event) => {

@@ -139,6 +139,6 @@ var processParser = (tokens, sentences) => {
 }
 
 clearParser.onclick = (event) => {
-    inputKalimat.value = "";
-    hasil.value = "";
+    inputKalimatParser.value = "";
+    hasilParser.value = "";
 }

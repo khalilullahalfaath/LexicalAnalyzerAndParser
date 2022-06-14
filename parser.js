@@ -2,7 +2,7 @@ var inputKalimatParser = document.getElementById('input_kalimat_parser');
 var hasilParser = document.getElementById('result-parser');
 var clearParser = document.getElementById('btn-clear-parser');
 var loadingParser = document.getElementById('loading-parser');
-var form = document.getElementById('form-parser'); 
+var formParser = document.getElementById('form-parser'); 
 
 var nonTerminals = ['S', 'SB','VB','OB'];
 var terminals = ['мать', 'отец','им', 'ты','вы','готовит','уяить','рисовать',

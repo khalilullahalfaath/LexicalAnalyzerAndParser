@@ -85,7 +85,7 @@ var processParser = (tokens, sentences) => {
     // stack initialization
     var stack = [];
     stack.push('#');
-    stack.push('I');
+    stack.push('S');
 
     tokens.push('EOS')
     console.log('tokens: ', tokens)

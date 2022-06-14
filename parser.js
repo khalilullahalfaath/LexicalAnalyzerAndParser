@@ -56,7 +56,7 @@ parse_table[["VB",'книга']] = ['erroe']
 parse_table[["VB",'комар']] = ['error']
 parse_table[["VB",'pом']] = ['error']
 parse_table[["VB",'ученик']] = ['error']
-parse_table[["VB",'EOS']] = ['EOS']
+parse_table[["VB",'EOS']] = ['error']
 
 //OB
 parse_table[["OB",'мать']] = ["error"]

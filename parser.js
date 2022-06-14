@@ -1,11 +1,11 @@
-var InputKalimatParser = document.getElementById('input_kalimat_parser');
-var HasilParser = document.getElementById('result-parser');
+var inputKalimatParser = document.getElementById('input_kalimat_parser');
+var hasilParser = document.getElementById('result-parser');
 var clearParser = document.getElementById('btn-clear-parser');
 var loadingParser = document.getElementById('loading-parser');
 var form = document.getElementById('form-parser'); 
 
 var nonTerminals = ['S', 'SB','VB','OB'];
-var Terminals = ['мать', 'отец','им', 'ты','вы','готовит','уяить','рисовать',
+var terminals = ['мать', 'отец','им', 'ты','вы','готовит','уяить','рисовать',
                   'читать','книга','комар', 'pом', 'ученик' ];
 
 var parse_table = []; 

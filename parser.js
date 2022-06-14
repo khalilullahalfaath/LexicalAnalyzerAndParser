@@ -56,7 +56,7 @@ parse_table[["VB",'книга']] = ['erroe']
 parse_table[["VB",'комар']] = ['error']
 parse_table[["VB",'pом']] = ['error']
 parse_table[["VB",'ученик']] = ['error']
-parse_table[["VB",'EOS']] = ['EOS']
+parse_table[["VB",'EOS']] = ['error']
 
 //OB
 parse_table[["OB",'мать']] = ["error"]
@@ -72,12 +72,6 @@ parse_table[["OB",'книга']] = ['книга']
 parse_table[["OB",'комар']] = ['комар']
 parse_table[["OB",'pом']] = ['pом']
 parse_table[["OB",'ученик']] = ['ученик']
-<<<<<<< HEAD
-parse_table[["OB",'EOS']] = ['EOS']
-
-
-
-=======
 parse_table[["OB",'EOS']] = ['error']
 
 formParser.onsubmit = (event) => {
@@ -143,4 +137,3 @@ var processParser = (tokens, sentences) => {
         hasilParser.value = 'error, tidak diterima karena tidak sesuai grammar';
     }
 }
->>>>>>> dc7a7acb0043b7cfcbe50fb568d8dd2c3aa327b0

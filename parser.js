@@ -137,3 +137,8 @@ var processParser = (tokens, sentences) => {
         hasilParser.value = 'error, tidak diterima karena tidak sesuai grammar';
     }
 }
+
+clearParser.onclick = (event) => {
+    inputKalimat.value = "";
+    hasil.value = "";
+}

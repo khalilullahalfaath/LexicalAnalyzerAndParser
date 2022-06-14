@@ -175,7 +175,7 @@ form.onsubmit = (event) => {
         currentToken += currentChar
         state = transitionTable[[state, currentChar]]
         if(state == 'q4') {
-            console.log("valid gais")
+            console.log("valid")
             validation += "valid "
             currentToken = ''
         }

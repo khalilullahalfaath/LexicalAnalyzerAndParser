@@ -157,6 +157,8 @@ transitionTable[["q40","н"]] = "q41"
 transitionTable[["q41","и"]] = "q42"
 transitionTable[["q42","к"]] = "q4"
 
+print("kontol")
+
 form.onsubmit = (event) => {
 
     event.preventDefault()

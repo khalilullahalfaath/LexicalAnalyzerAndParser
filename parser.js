@@ -27,3 +27,19 @@ parse_table[['S','ученик']] = ['error']
 parse_table[['S','EOS']] = ['error']
 
 //SB
+
+//OB
+parse_table[["OB",'мать']] = ["error"]
+parse_table[["OB",'отец']] = ["error"]
+parse_table[["OB",'им']] = ["error"]
+parse_table[["OB", 'ты']] = ["error"]
+parse_table[["OB",'вы']] = ["error"]
+parse_table[["OB",'готовит']] = ['error']
+parse_table[["OB",'уяить']] = ['error']
+parse_table[["OB",'рисовать']] = ['error']
+parse_table[["OB",'читать']] = ['error']
+parse_table[["OB",'книга']] = ['книга']
+parse_table[["OB",'комар']] = ['комар']
+parse_table[["OB",'pом']] = ['pом']
+parse_table[["OB",'ученик']] = ['ученик']
+parse_table[["OB",'EOS']] = ['EOS']

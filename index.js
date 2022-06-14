@@ -46,14 +46,6 @@ for(var state in stateList) {
     transitionTable[[stateList[state], ' ']] = 'ERROR'
 }
 
-/*
-S = Terminal
-SA = Subject
-VB = Verb
-OB
-
-*/
-
 // initial state
 transitionTable[["q0"," "]] = "q0";
 
@@ -164,10 +156,6 @@ transitionTable[["q39","е"]] = "q40"
 transitionTable[["q40","н"]] = "q41"
 transitionTable[["q41","и"]] = "q42"
 transitionTable[["q42","к"]] = "q4"
-
-//Parse table
-
-
 
 form.onsubmit = (event) => {
 

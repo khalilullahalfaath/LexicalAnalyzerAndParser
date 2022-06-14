@@ -42,6 +42,22 @@ parse_table[['SB','pом']] = ['error']
 parse_table[['SB','ученик']] = ['error']
 parse_table[['SB','EOS']] = ['error']
 
+//VB 
+parse_table[["VB",'мать']] = ["error"]
+parse_table[["VB",'отец']] = ["error"]
+parse_table[["VB",'им']] = ["error"]
+parse_table[["VB", 'ты']] = ["error"]
+parse_table[["VB",'вы']] = ["error"]
+parse_table[["VB",'готовит']] = ['готовит']
+parse_table[["VB",'уяить']] = ['уяить']
+parse_table[["VB",'рисовать']] = ['рисовать']
+parse_table[["VB",'читать']] = ['читать']
+parse_table[["VB",'книга']] = ['erroe']
+parse_table[["VB",'комар']] = ['error']
+parse_table[["VB",'pом']] = ['error']
+parse_table[["VB",'ученик']] = ['error']
+parse_table[["VB",'EOS']] = ['EOS']
+
 //OB
 parse_table[["OB",'мать']] = ["error"]
 parse_table[["OB",'отец']] = ["error"]
@@ -57,3 +73,6 @@ parse_table[["OB",'комар']] = ['комар']
 parse_table[["OB",'pом']] = ['pом']
 parse_table[["OB",'ученик']] = ['ученик']
 parse_table[["OB",'EOS']] = ['EOS']
+
+
+
